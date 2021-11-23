@@ -9,10 +9,14 @@ export class AppController {
   getHello(): string{
     return this.appService.getHello()
   }
-  @Get()
+
   getAnswer(){
     return this.appService.getAnswer()
   }
+@Get()
+  getPerson(){
+    return this.appService.getPerson()
+}
 
 
 }

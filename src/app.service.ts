@@ -45,4 +45,19 @@ export class AppService {
     }
   }
 
+  getPerson(): Person{
+    const person = new Person('Артем','Іващенко',19);
+    return person;
+  }
+
+}
+export class Person{
+  firstName: string;
+  lastName: string;
+  yearsOld: number;
+  constructor(firstName,lastName,yearsOld) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.yearsOld = yearsOld;
+  }
 }
