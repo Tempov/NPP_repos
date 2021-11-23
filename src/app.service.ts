@@ -26,4 +26,23 @@ export class AppService {
     return sList;
   }
 
+  getAnswer(): Promise<any> {
+    let a,b : number;
+    a = 10;
+    b = 22;
+    const res = this.checkNum(a,b);
+    return res
+  }
+  public async checkNum(a:number,b:number):Promise<any>{
+    const res = [];
+    res[0] = a+b;
+    if(res[0] % 2 == 0){
+      res[1] = "Парне"
+      return res
+    }else {
+      res[1] = "Непарне"
+      return res
+    }
+  }
+
 }
